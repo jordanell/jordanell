@@ -1,0 +1,68 @@
+$link-letter-spacing: 2px;
+$button-border-size: 2px;
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $bg-dark;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: $font-weight-light;
+  letter-spacing: $link-letter-spacing;
+
+  @include transition(color .2s ease-in-out);
+}
+
+button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: $font-weight-light;
+  letter-spacing: $link-letter-spacing;
+  padding: 1em 1.5em;
+  background-color: transparent;
+
+  @include transition(
+    background-color .2s ease-in-out,
+    color .2s ease-in-out
+  );
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.light {
+    color: $white;
+    border: $button-border-size solid $white;
+
+    &:hover {
+      background-color: $white;
+      color: $font-dark;
+    }
+  }
+
+  &.dark {
+    color: $font-dark;
+    border: $button-border-size solid $font-dark;
+
+    &:hover {
+      background-color: $font-dark;
+      color: $white;
+    }
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.8em;
+}
+
+h2 {
+  font-weight: 400;
+}

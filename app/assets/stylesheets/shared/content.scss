@@ -1,0 +1,26 @@
+.content-container {
+  background-color: $white;
+  padding: 0 32px;
+}
+
+.content-block {
+  @include outer-container;
+
+  padding: 96px 0;
+  text-align: center;
+  border-bottom: $base-border;
+  margin-bottom: 10px;
+}
+
+.content-block-inner {
+  @include span-columns(8);
+  @include shift(2);
+
+  h2 {
+    color: $font-dark;
+  }
+
+  p {
+    color: $font-medium;
+  }
+}

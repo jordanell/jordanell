@@ -1,0 +1,36 @@
+#header {
+  $header-height: 75px;
+  $header-padding: 20px;
+  $header-icon-width: 200px;
+  $header-link-padding: .75em 1em;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  padding: $header-padding;
+
+  .icon-container {
+    width: $header-icon-width;
+    float: left;
+  }
+
+  .links-container {
+    text-align: right;
+
+    li {
+      display: inline-block;
+      padding: $header-link-padding;
+      font-size: 13px;
+    }
+
+    a {
+      color: $font-opacity-medium;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+#footer {
+  $footer-link-padding: .75em 1em;
+
+  text-align: center;
+  padding: 64px 32px;
+
+  .name-container {
+    color: $font-opacity-medium;
+  }
+
+  .links-container, .social-container {
+    li {
+      display: inline-block;
+      padding: $footer-link-padding;
+      font-size: 13px;
+    }
+
+    a {
+      color: $font-opacity-medium;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .legal-container {
+    color: $font-opacity-low;
+
+    p {
+      font-size: 11px;
+    }
+  }
+}

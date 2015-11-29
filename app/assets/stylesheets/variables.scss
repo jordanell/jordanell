@@ -1,0 +1,32 @@
+// General colors
+$red:   #E0645C;
+$blue:  #2DB6CF;
+$green: #46b98a;
+$white: #FFFFFF;
+
+// Background colors
+$bg-dark:  #26262A;
+$bg-light: #888888;
+
+// Font colors
+$font-dark: #181818;
+$font-medium: rgba(26, 26, 26, 0.6);
+
+// Font opacities
+$font-opacity-full: rgba(255, 255, 255, 1);
+$font-opacity-medium: rgba(255, 255, 255, 0.8);
+$font-opacity-low: rgba(255, 255, 255, 0.4);
+
+// Font-weights
+$font-weight-light: 300;
+
+// Border colors
+$border-light: rgba(26, 26, 26, 0.2);
+
+// Borders
+$base-border: 1px solid $border-light;
+
+// Resolutions
+$small: 550px;
+$medium: 800px;
+$large: 1000px;
