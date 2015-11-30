@@ -1,0 +1,15 @@
+.column-4 {
+  @include span-columns(4);
+}
+
+.column-8 {
+  @include span-columns(8);
+}
+
+.omega {
+  @include omega;
+}
+
+.center {
+  text-align: center;
+}

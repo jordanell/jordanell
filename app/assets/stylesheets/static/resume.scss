@@ -1,0 +1,25 @@
+.static-resume {
+  text-align: left;
+
+  .hero-container {
+    background-image: url('http://static1.squarespace.com/static/5300d507e4b0fa8137bdc65d/t/54b58560e4b077e6a40be89b/1421182312935/download.jpeg');
+    background-size: cover;
+  }
+
+  .content-block {
+    text-align: left;
+  }
+
+  h3, h4 {
+    text-transform: uppercase;
+    font-weight: $font-weight-light;
+  }
+
+  .sub-container {
+    margin-bottom: 4em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
