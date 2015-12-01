@@ -39,6 +39,9 @@ group :development, :test do
 
   # Model factories
   gem 'factory_girl', '4.5.0'
+
+  # For adding annotation comments in files
+  gem 'annotate', '2.6.10'
 end
 
 group :production do

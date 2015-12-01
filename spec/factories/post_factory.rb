@@ -12,9 +12,11 @@
 #  slug       :string           not null
 #
 
-class Post < ActiveRecord::Base
-  validates :featured, inclusion: { in: [true, false] }
-  validates :slug, presence: true, allow_blank: false, length: { maximum: 75 }, uniqueness: true
-  validates :title, presence: true, allow_blank: false, length: { maximum: 150 }
-  validates :visible, inclusion: { in: [true, false] }
+FactoryGirl.define do
+  factory :post do
+    title { "Post #{SecureRandom.uuid[0..10]}" }
+    slug { SecureRandom.uuid }
+    body 'Post body'
+    visible true
+  end
 end

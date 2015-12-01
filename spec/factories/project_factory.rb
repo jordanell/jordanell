@@ -12,9 +12,11 @@
 #  slug        :string           not null
 #
 
-class Project < ActiveRecord::Base
-  validates :featured, inclusion: { in: [true, false] }
-  validates :name, presence: true, allow_blank: false, length: { maximum: 200 }
-  validates :slug, presence: true, allow_blank: false, length: { maximum: 75 }, uniqueness: true
-  validates :visible, inclusion: { in: [true, false] }
+FactoryGirl.define do
+  factory :project do
+    name { "Project #{SecureRandom.uuid[0..10]}" }
+    slug { SecureRandom.uuid }
+    description 'Project description'
+    visible true
+  end
 end
