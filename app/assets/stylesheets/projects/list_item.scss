@@ -1,0 +1,53 @@
+.project-list-items {
+  @include outer-container;
+}
+
+.project-list-item {
+  @include span-columns(4);
+  @include omega(3);
+
+  position: relative;
+  background-color: $bg-dark;
+  height: 300px;
+
+  &:hover {
+    .content {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: $medium) {
+    @include span-columns(6);
+    @include omega-reset(3n);
+    @include omega(2);
+
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: $small) {
+    @include fill-parent
+  }
+
+  .content {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 65px 10px 0 10px;
+    text-align: center;
+
+    @include transition(opacity .2s ease-in 0s);
+
+    h2 {
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    .button {
+      font-size: 12px;
+    }
+  }
+}

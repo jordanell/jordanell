@@ -21,15 +21,12 @@
       </div>
     </div>
     <div class="content-block github">
-      <div class="content-block-inner">
-        <h2>Github</h2>
-        <p>
-          I'm an active user on Github so don't forget to checkout my
-          profile.
-        </p>
-        <p>
-          <a class="button dark" href="https://github.com/jordanell">Github</a>
-        </p>
+      <div class="content-block-inner projects">
+        <div class="project-list-items">
+          <% @projects.each do |project| %>
+            <%= render partial: 'projects/list_item', locals: { project: project } %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

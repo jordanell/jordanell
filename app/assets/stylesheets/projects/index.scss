@@ -9,4 +9,9 @@
       margin-bottom: 30px;
     }
   }
+
+  .content-block-inner.projects {
+    @include span-columns(10);
+    @include shift(1);
+  }
 }
