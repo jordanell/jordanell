@@ -3,4 +3,33 @@
     background-image: url('http://static1.squarespace.com/static/5300d507e4b0fa8137bdc65d/t/54fdbc22e4b0d17f106f88e1/1423255220465/vdfd.jpg');
     background-size: cover;
   }
+
+  .content-block-inner.contact-info {
+    @include span-columns(10);
+    @include shift(1);
+
+    .left, .right {
+      @include span-columns(6);
+
+      @media screen and (max-width: $medium) {
+        @include fill-parent
+      }
+    }
+
+    .left h3 {
+      text-transform: uppercase;
+
+      p {
+
+      }
+
+      a {
+        border-bottom: 1px dotted $border-light;
+      }
+    }
+
+    .right img {
+      max-width: 250px;
+    }
+  }
 }
