@@ -25,7 +25,7 @@
         </p>
       </div>
     </div>
-    <div class="content-block github">
+    <div class="content-block">
       <div class="content-block-inner projects">
         <div class="project-list-items">
           <% @featured_projects.each do |project| %>
@@ -34,6 +34,16 @@
         </div>
         <p>
           <a class="button dark" href="/portfolio">View More Projects</a>
+        </p>
+      </div>
+    </div>
+    <div class="content-block">
+      <div class="content-block-inner post">
+        <div class="post-list-items">
+          <%= render partial: 'posts/list_item', locals: { post: @featured_post } %>
+        </div>
+        <p>
+          <a class="button dark" href="/blog">View More Posts</a>
         </p>
       </div>
     </div>
