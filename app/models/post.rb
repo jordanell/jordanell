@@ -17,4 +17,15 @@ class Post < ActiveRecord::Base
   validates :slug, presence: true, allow_blank: false, length: { maximum: 75 }, uniqueness: true
   validates :title, presence: true, allow_blank: false, length: { maximum: 150 }
   validates :visible, inclusion: { in: [true, false] }
+
+  # Rails admin config
+  rails_admin do
+    edit do
+      field :title
+      field :slug
+      field :body, :ck_editor
+      field :visible
+      field :featured
+    end
+  end
 end

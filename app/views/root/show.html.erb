@@ -25,5 +25,17 @@
         </p>
       </div>
     </div>
+    <div class="content-block github">
+      <div class="content-block-inner projects">
+        <div class="project-list-items">
+          <% @featured_projects.each do |project| %>
+            <%= render partial: 'projects/list_item', locals: { project: project } %>
+          <% end %>
+        </div>
+        <p>
+          <a class="button dark" href="/portfolio">View More Projects</a>
+        </p>
+      </div>
+    </div>
   </div>
 </div>

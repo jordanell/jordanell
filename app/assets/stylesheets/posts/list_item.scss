@@ -1,0 +1,31 @@
+.post-list-items {
+  @include outer-container;
+
+  text-align: left;
+
+  .post-list-item {
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.post-list-item {
+  @include fill-parent;
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .published-date {
+    margin-left: 20px;
+  }
+
+  .more {
+    text-transform: uppercase;
+    border-bottom: 1px dotted $border-light;
+    font-size: 0.75em;
+  }
+}

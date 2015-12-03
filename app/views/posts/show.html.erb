@@ -1,22 +1,21 @@
-<div class="posts-index">
+<div class="posts-show">
   <div class="hero-container">
     <div class="color-overlay"></div>
     <div class="hero-content">
-      <p>A few stories from my</p>
-      <h1>Blog</h1>
+      <p></p>
+      <h1><%= @post.title %></h1>
     </div>
     <div class="chevron">
       <i class="fa fa-chevron-down"></i>
     </div>
   </div>
   <div class="content-container">
-    <div class="content-block github">
+    <div class="content-block">
       <div class="content-block-inner">
-        <div class="post-list-items">
-          <% @posts.each do |post| %>
-            <%= render partial: 'posts/list_item', locals: { post: post } %>
-          <% end %>
-        </div>
+        <%= render partial: 'posts/meta', locals: { post: @post } %>
+        <p>
+          <%= @post.body.html_safe %>
+        </p>
       </div>
     </div>
   </div>

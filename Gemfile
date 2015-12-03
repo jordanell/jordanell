@@ -14,8 +14,6 @@ gem 'pg', '0.18.4'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 
 # Used for SCSS general library
 gem 'bourbon', '4.2.2'
@@ -26,6 +24,12 @@ gem 'font-awesome-sass', '4.3.0'
 
 # Used for the admin interface
 gem 'rails_admin', '0.8.1'
+
+# Used for rich text editor
+gem 'ckeditor', '4.1.2'
+
+# Used for safely truncating html
+gem 'truncate_html'
 
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views

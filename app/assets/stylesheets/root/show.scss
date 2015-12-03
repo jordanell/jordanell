@@ -3,4 +3,13 @@
     background-image: url('http://static1.squarespace.com/static/5300d507e4b0fa8137bdc65d/t/55563638e4b0849a888ffeed/1431629774431/squarespace-developer-devon-stank-banner-01.jpg');
     background-size: cover;
   }
+
+  .content-block-inner.projects {
+    @include span-columns(10);
+    @include shift(1);
+
+    .project-list-items {
+      margin-bottom: 60px;
+    }
+  }
 }
