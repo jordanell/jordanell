@@ -6,6 +6,7 @@
   text-align: center;
   color: $white;
   padding: 180px 0 155px 0;
+  overflow: hidden;
 
   .color-overlay {
     z-index: $z-index-low;

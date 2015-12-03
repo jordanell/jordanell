@@ -1,6 +1,7 @@
 <div class="projects-show">
   <div class="hero-container">
     <div class="color-overlay"></div>
+    <%= image_tag @project.hero_image.url(:medium) %>
     <div class="hero-content">
       <p></p>
       <h1><%= @project.name %></h1>
