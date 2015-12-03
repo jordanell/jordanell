@@ -1,6 +1,5 @@
 .hero-container {
   $hero-min-height: 600px;
-  $hero-color-overlay: rgba(0,0,0,.7);
 
   min-height: $hero-min-height;
   position: relative;
@@ -9,12 +8,6 @@
   padding: 180px 0 155px 0;
 
   .color-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $hero-color-overlay;
     z-index: $z-index-low;
   }
 

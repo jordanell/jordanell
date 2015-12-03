@@ -3,15 +3,18 @@
 }
 
 .project-list-item {
+  $opacity-transition-time: .2s;
+
   @include span-columns(4);
   @include omega(3);
 
   position: relative;
   background-color: $bg-dark;
   height: 300px;
+  overflow: hidden;
 
   &:hover {
-    .content {
+    .content, .color-overlay {
       opacity: 1;
     }
   }
@@ -28,6 +31,21 @@
     @include fill-parent
   }
 
+  .color-overlay {
+    opacity: 0;
+    z-index: $z-index-low;
+
+    @include transition(opacity $opacity-transition-time ease-in 0s);
+  }
+
+  img {
+    position: absolute;
+    top: -15px;
+    bottom: 0;
+    left: -150px;
+    right: 0;
+  }
+
   .content {
     opacity: 0;
     position: absolute;
@@ -37,8 +55,9 @@
     bottom: 0;
     padding: 65px 10px 0 10px;
     text-align: center;
+    z-index: $z-index-medium;
 
-    @include transition(opacity .2s ease-in 0s);
+    @include transition(opacity $opacity-transition-time ease-in 0s);
 
     h2 {
       margin-bottom: 35px;
