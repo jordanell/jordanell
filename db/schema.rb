@@ -11,19 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201064948) do
+ActiveRecord::Schema.define(version: 20151203043259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",                      null: false
+    t.string   "title",                                   null: false
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "featured",   default: false
-    t.boolean  "visible",    default: false
-    t.string   "slug",                       null: false
+    t.boolean  "featured",                default: false
+    t.boolean  "visible",                 default: false
+    t.string   "slug",                                    null: false
+    t.string   "hero_image_file_name"
+    t.string   "hero_image_content_type"
+    t.integer  "hero_image_file_size"
+    t.datetime "hero_image_updated_at"
   end
 
   add_index "posts", ["featured"], name: "index_posts_on_featured", using: :btree
@@ -31,13 +35,17 @@ ActiveRecord::Schema.define(version: 20151201064948) do
   add_index "posts", ["visible"], name: "index_posts_on_visible", using: :btree
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name",                        null: false
+    t.string   "name",                                    null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "featured",    default: false
-    t.boolean  "visible",     default: false
-    t.string   "slug",                        null: false
+    t.boolean  "featured",                default: false
+    t.boolean  "visible",                 default: false
+    t.string   "slug",                                    null: false
+    t.string   "hero_image_file_name"
+    t.string   "hero_image_content_type"
+    t.integer  "hero_image_file_size"
+    t.datetime "hero_image_updated_at"
   end
 
   add_index "projects", ["featured"], name: "index_projects_on_featured", using: :btree
