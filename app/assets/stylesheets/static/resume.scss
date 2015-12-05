@@ -2,7 +2,7 @@
   text-align: left;
 
   .hero-container {
-    background-image: url('http://static1.squarespace.com/static/5300d507e4b0fa8137bdc65d/t/54b58560e4b077e6a40be89b/1421182312935/download.jpeg');
+    background-image: url('https://s3.amazonaws.com/static.jordanell.com/hero/computer-bw-4.jpg');
     background-size: cover;
   }
 
@@ -15,11 +15,19 @@
     font-weight: $font-weight-light;
   }
 
+  li {
+    color: $font-medium;
+  }
+
   .sub-container {
     margin-bottom: 4em;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    ul {
+      margin-left: 30px;
     }
   }
 }

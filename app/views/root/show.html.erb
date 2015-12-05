@@ -4,8 +4,8 @@
     <div class="hero-content">
       <p>Full stack developer with a passion for</p>
       <h1>Ruby on Rails</h1>
-      <a class="button light" href="/">Contact</a>
-      <a class="button light" href="/">Resume</a>
+      <a class="button light" href="/contact">Contact</a>
+      <a class="button light" href="/resume">Resume</a>
     </div>
     <div class="chevron">
       <i class="fa fa-chevron-down"></i>
@@ -16,36 +16,40 @@
       <div class="content-block-inner">
         <h2>A brief background</h2>
         <p>
-          My interest in web development stemmed from my
-          passion for gaming. Between developing websites
+          My interest in software development reaches back to my teenage
+          years and my love of video games. Between developing websites
           and playing video games, I admittedly spend most
-          of my time in front of a screen. Some of my passions
-          are writing clean code, creating sexy user
-          experiences and filling up a fresh cup of coffee.
+          of my time in front of a screen. My passions
+          are writing clean maintainable code, filling up a cup of french
+          press, and watching movies on Netflix.
         </p>
       </div>
     </div>
-    <div class="content-block">
-      <div class="content-block-inner projects">
-        <div class="project-list-items">
-          <% @featured_projects.each do |project| %>
-            <%= render partial: 'projects/list_item', locals: { project: project } %>
-          <% end %>
+    <% if @featured_projects.try(:length) > 0 %>
+      <div class="content-block">
+        <div class="content-block-inner projects">
+          <div class="project-list-items">
+            <% @featured_projects.each do |project| %>
+              <%= render partial: 'projects/list_item', locals: { project: project } %>
+            <% end %>
+          </div>
+          <p>
+            <a class="button dark" href="/portfolio">View More Projects</a>
+          </p>
         </div>
-        <p>
-          <a class="button dark" href="/portfolio">View More Projects</a>
-        </p>
       </div>
-    </div>
-    <div class="content-block">
-      <div class="content-block-inner post">
-        <div class="post-list-items">
-          <%= render partial: 'posts/list_item', locals: { post: @featured_post } %>
+    <% end %>
+    <% if @featured_post %>
+      <div class="content-block">
+        <div class="content-block-inner post">
+          <div class="post-list-items">
+            <%= render partial: 'posts/list_item', locals: { post: @featured_post } %>
+          </div>
+          <p>
+            <a class="button dark" href="/blog">View More Posts</a>
+          </p>
         </div>
-        <p>
-          <a class="button dark" href="/blog">View More Posts</a>
-        </p>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>

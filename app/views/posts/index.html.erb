@@ -13,8 +13,14 @@
     <div class="content-block github">
       <div class="content-block-inner">
         <div class="post-list-items">
-          <% @posts.each do |post| %>
-            <%= render partial: 'posts/list_item', locals: { post: post } %>
+          <% if @posts.try(:length) > 0 %>
+            <% @posts.each do |post| %>
+              <%= render partial: 'posts/list_item', locals: { post: post } %>
+            <% end %>
+          <% else %>
+            <p>
+              I have not created any posts yet! Check back soon.
+            </p>
           <% end %>
         </div>
       </div>

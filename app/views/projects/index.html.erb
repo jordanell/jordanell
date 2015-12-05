@@ -2,7 +2,7 @@
   <div class="hero-container">
     <div class="color-overlay"></div>
     <div class="hero-content">
-      <p>Take a moment to view some</p>
+      <p>View some of my side</p>
       <h1>Projects</h1>
     </div>
     <div class="chevron">
@@ -12,19 +12,25 @@
   <div class="content-container">
     <div class="content-block">
       <div class="content-block-inner">
-        <h2>Half design / half code</h2>
+        <h2>Half code / half learning</h2>
         <p>
-          Below you will find a handful of my work that
-          I've accomplished over the past few years.
-          Each project has detailed descriptions and technology used.
+          Below you will find some of my more recent
+          side projects I have completed in the past few years.
+          Each project contains a description and a list of technologies used.
         </p>
       </div>
     </div>
-    <div class="content-block github">
+    <div class="content-block projects">
       <div class="content-block-inner projects">
         <div class="project-list-items">
-          <% @projects.each do |project| %>
-            <%= render partial: 'projects/list_item', locals: { project: project } %>
+          <% if @projects.try(:length) > 0 %>
+            <% @projects.each do |project| %>
+              <%= render partial: 'projects/list_item', locals: { project: project } %>
+            <% end %>
+          <% else %>
+            <p>
+              I have not uploaded any projects yet! Check back soon.
+            </p>
           <% end %>
         </div>
       </div>
