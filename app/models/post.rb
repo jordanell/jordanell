@@ -28,8 +28,11 @@ class Post < ActiveRecord::Base
   validates :title, presence: true, allow_blank: false, length: { maximum: 150 }
   validates :visible, inclusion: { in: [true, false] }
 
-  validates_attachment_presence :hero_image
-  validates_attachment_content_type :hero_image, content_type: /\Aimage\/.*\Z/
+  validates_attachment :hero_image, presence: true,
+    content_type: { content_type: %w(image/jpeg image/jpg image/png image/gif) },
+    size: { in: 0..5.megabytes }
+
+  validate :featured_and_visible
 
   # Rails admin config
   rails_admin do
@@ -41,5 +44,12 @@ class Post < ActiveRecord::Base
       field :visible
       field :featured
     end
+  end
+
+  private
+
+  def featured_and_visible
+    # A post can only be featured if it is visible
+    errors.add(:featured, 'Cannot be featured and not visible') if featured && !visible
   end
 end

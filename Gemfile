@@ -35,7 +35,7 @@ gem 'truncate_html'
 gem 'paperclip', '4.3.2'
 
 # Used for paperclip and S3
-gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk', '1.64.0'
 
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
