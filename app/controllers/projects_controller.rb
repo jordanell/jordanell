@@ -13,8 +13,8 @@ class ProjectsController < ApplicationController
   private
 
   def fetch_project
-    @project = Project.find_by!(slug: params[:id])
+    @project = Project.where(visible: true).find_by!(slug: params[:id])
   rescue ActiveRecord::RecordNotFound
-    return error_404
+    return render_error(404)
   end
 end

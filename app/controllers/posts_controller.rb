@@ -13,8 +13,8 @@ class PostsController < ApplicationController
   private
 
   def fetch_post
-    @post = Post.find_by!(slug: params[:id])
+    @post = Post.where(visible: true).find_by!(slug: params[:id])
   rescue ActiveRecord::RecordNotFound
-    return error_404
+    return render_error(404)
   end
 end

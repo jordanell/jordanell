@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def error_404
+  def render_error(code)
+    @status_code = code
+
+    render 'errors/show', status: code
   end
 end
