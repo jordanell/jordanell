@@ -52,6 +52,10 @@ group :development, :test do
 
   # For adding annotation comments in files
   gem 'annotate', '2.6.10'
+
+  # For DOM testing
+  gem 'capybara', '2.5.0'
+  gem 'capybara-webkit', '1.7.1'
 end
 
 group :production do
