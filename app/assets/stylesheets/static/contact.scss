@@ -29,7 +29,15 @@
     }
 
     .right img {
-      max-width: 250px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .right {
+      @media screen and (max-width: $medium) {
+        margin-top: 50px;
+        text-align: center;
+      }
     }
   }
 }

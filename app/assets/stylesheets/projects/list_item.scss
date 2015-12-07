@@ -23,12 +23,16 @@
     @include span-columns(6);
     @include omega-reset(3n);
     @include omega(2);
-
-    margin-right: 0;
   }
 
   @media screen and (max-width: $small) {
-    @include fill-parent
+    @include fill-parent;
+
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .color-overlay {
