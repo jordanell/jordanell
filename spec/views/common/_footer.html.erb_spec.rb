@@ -10,7 +10,7 @@ describe 'common/_footer.html.erb' do
   it 'should display the correct links' do
     render partial: 'common/footer'
 
-    ['Home', 'Portfolio', 'About', 'Blog', 'Resume', 'Contact'].each do |link|
+    ['Home', 'Portfolio', 'About', 'Blog', 'Resumé', 'Contact'].each do |link|
       rendered.should have_selector('a', text: link)
     end
   end
