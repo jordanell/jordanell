@@ -1,7 +1,6 @@
 <div class="posts-show">
   <div class="hero-container">
     <div class="color-overlay"></div>
-    <%= image_tag @post.hero_image.url(:medium) %>
     <div class="hero-content">
       <p></p>
       <h1><%= @post.title %></h1>
@@ -21,3 +20,5 @@
     </div>
   </div>
 </div>
+
+<%= render partial: 'shared/hero_image', locals: { image_url: @post.hero_image.url(:medium) } %>
