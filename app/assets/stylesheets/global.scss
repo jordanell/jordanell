@@ -12,6 +12,7 @@ a {
   text-transform: uppercase;
   font-weight: $font-weight-light;
   letter-spacing: $link-letter-spacing;
+  word-wrap: break-word;
 
   @include transition(color .2s ease-in-out);
 }

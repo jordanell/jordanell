@@ -16,6 +16,16 @@
   @include span-columns(8);
   @include shift(2);
 
+  @media screen and (max-width: $medium) {
+    @include span-columns(10);
+    @include shift(1);
+  }
+
+  @media screen and (max-width: $small) {
+    @include span-columns(12);
+    @include shift(0);
+  }
+
   h2 {
     color: $font-dark;
   }

@@ -1,4 +1,6 @@
 .static-resume {
+  $ul-left-margin: 30px;
+
   text-align: left;
 
   .hero-container {
@@ -26,7 +28,20 @@
     }
 
     ul {
-      margin-left: 30px;
+      margin-left: $ul-left-margin;
+    }
+  }
+
+  .column-4, .column-8 {
+    @media screen and (max-width: $small) {
+      @include fill-parent;
+
+      text-align: center;
+
+      ul {
+        text-align: left;
+        margin-left: $ul-left-margin;
+      }
     }
   }
 }
