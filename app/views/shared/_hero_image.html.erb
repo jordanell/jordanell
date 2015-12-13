@@ -1,4 +1,8 @@
 <!-- Insert the hero image dynamically -->
-<style media="screen">
-  .hero-container { background-image: url(<%= image_url %>); }
-</style>
+<% image_url ||= nil %>
+
+<% if image_url %>
+  <style media="screen">
+    .hero-container { background-image: url(<%= image_url %>); }
+  </style>
+<% end %>

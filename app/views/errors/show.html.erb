@@ -14,7 +14,7 @@
       <div class="content-block-inner">
         <h2>Whoops!</h2>
         <p>
-          A <%= @status_code %> error was caused by your request.
+          A <%= @status_code ? @status_code : nil %> error was caused by your request.
         <p>
         <p>
           Please make sure you are visiting the correct page, or try again.
