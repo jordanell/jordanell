@@ -26,6 +26,15 @@ describe PostsController, type: :controller do
 
       expect(assigns(:posts)).to eq([@post1])
     end
+
+    it 'should order the posts by created_at' do
+      @post1 = FactoryGirl.create(:post, visible: true, created_at: 1.year.ago)
+      @post2 = FactoryGirl.create(:post, visible: true, created_at: 2.year.ago)
+
+      get :index
+
+      expect(assigns(:posts)).to eq([@post1, @post2])
+    end
   end
 
   describe '#show' do

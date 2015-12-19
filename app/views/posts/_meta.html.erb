@@ -1,6 +1,9 @@
 <p class="post-meta">
   <span class="author">Jordan Ell</span>
   <span class="published-date">
-    <%= post.updated_at.strftime('%B %d, %Y') %>
+    <!-- This needs to be created_at because acts_as_list updates each
+         post when a new post is created. We could add a published_at
+         in the future. -->
+    <%= post.created_at.strftime('%B %d, %Y') %>
   </span>
 </p>

@@ -8,8 +8,8 @@ class PostsController < ApplicationController
   before_filter :set_seo, only: [:show]
 
   def index
-    # Get all visible posts
-    @posts = Post.where(visible: true)
+    # Get all visible posts by their created_at time
+    @posts = Post.where(visible: true).order(created_at: :desc)
   end
 
   def show
