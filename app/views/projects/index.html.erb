@@ -23,7 +23,7 @@
     <div class="content-block projects">
       <div class="content-block-inner projects">
         <div class="project-list-items">
-          <% if @projects.try(:length) > 0 %>
+          <% if @projects && @projects.try(:length) > 0 %>
             <% @projects.each do |project| %>
               <%= render partial: 'projects/list_item', locals: { project: project } %>
             <% end %>
